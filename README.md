@@ -9,3 +9,8 @@ b. what it means? guest:guest@localhost:5672 , what is the first quest, and what
 - Simulation slow subscriber
 ![](static/Screenshot%202024-04-24%20140217.png)
 My total number of queue reach around 40. That is because the intentional delay that makes the thread sleep for 1 second and running the publisher app several times quickly thus making the queued messages to spike up significantly.
+
+-  Running at least three subscribers
+![](static/Screenshot%202024-04-24%20141731.png)
+![](static/Screenshot%202024-04-24%20142332.png)
+Running multiple instances of the subscriber application helps distribute the workload thus leading to a reduction in spikes and quicker consumption of the message queue. To improve, we can implement multi-threading to improve the efficiency of message processing, especially in scenarios where messages are arriving rapidly or in large volumes.
